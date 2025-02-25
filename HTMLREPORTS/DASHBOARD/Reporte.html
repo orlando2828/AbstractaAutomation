@@ -1,0 +1,995 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>REPORTS</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c952cc003431b643d7a73337421ff42b75bac784/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css">.header .vheader .nav-logo > a .logo {background-image: url('https:\TesisCIISA\src\main\java\config\logoAbstracta.png')!important;background-size: 150px;width: 1000%;} .header .vheader .nav-logo {width: 180px;}</style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">REPORTS</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">abr 25, 2022 13:21:18 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>abr 25, 2022 13:21:18 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>abr 25, 2022 13:24:36 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>2</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>2</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='48%'><b>32</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>34</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>BUSQUEDAPRODUCTOMERCADOLIBREPORCATEGORIA</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>BUSQUEDAPRODUCTOMERCADOLIBRE</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>windows 10</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 2,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 32,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 34
+};
+</script><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">BUSQUEDAPRODUCTOMERCADOLIBREPORCATEGORIA</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>BUSQUEDAPRODUCTOMERCADOLIBREPORCATEGORIA</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:23:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>BUSQUEDA PRODUCTO MERCADO LIBRE POR CATEGORIA</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">BUSQUEDAPRODUCTOMERCADOLIBRE</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>BUSQUEDAPRODUCTOMERCADOLIBRE</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:21:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>BUSQUEDA PRODUCTO MERCADO LIBRE</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">BUSQUEDAPRODUCTOMERCADOLIBREPORCATEGORIA</a><a class="dropdown-item" href="#">BUSQUEDAPRODUCTOMERCADOLIBRE</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag="BUSQUEDAPRODUCTOMERCADOLIBRE"
+          device="">
+          <div class="test-detail">
+            <p class="name">BUSQUEDA PRODUCTO MERCADO LIBRE</p>
+            <p class="text-sm">
+              <span>13:21:36 PM</span> / <span>00:01:27:711</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">BUSQUEDA PRODUCTO MERCADO LIBRE</h5>
+<span class='badge badge-success'>04.25.2022 13:21:36</span>
+<span class='badge badge-danger'>04.25.2022 13:23:03</span>
+<span class='badge badge-default'>00:01:27:711</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">BUSQUEDAPRODUCTOMERCADOLIBRE</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:21:36</td>
+        <td>
+          Ir a Qtest : <a href='TOOLSQA ' target="_blank">BUSQUEDA PRODUCTO MERCADO LIBRE</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:21:37</td>
+        <td>
+          PASO 1: Ingreso a Home Mercado Libre
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:21:38</td>
+        <td>
+          Ingreso correcto a Home Mercado Libre
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907297042.png' src="htmlScreenshots\1650907297042.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:21:41</td>
+        <td>
+          PASO 2: Informacion de este sitio usa Cookies
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:21:42</td>
+        <td>
+          Se da por entendido que el sitio acepta Cookies
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907301431.png' src="htmlScreenshots\1650907301431.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:21:45</td>
+        <td>
+          PASO 3: Ingreso de producto requerido
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:21:47</td>
+        <td>
+          Ingreso correcto de producto requerido
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907305191.png' src="htmlScreenshots\1650907305191.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:21:51</td>
+        <td>
+          PASO 4: Busqueda de producto
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:21:52</td>
+        <td>
+          Se realiza busqueda del producto ingresado
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907311632.png' src="htmlScreenshots\1650907311632.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:21:55</td>
+        <td>
+          PASO 5: Primer,Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:21:55</td>
+        <td>
+          El Link del producto seleccionado es: https://click1.mercadolibre.cl/mclics/clicks/external/MLC/count?a=fAeap36KgFsMdplQS1hkMZNGWhgpSh4OqhpA%2F9jOeDPSIy2i44deM0wZJP4NBIPv%2FiK6Q3i5ohLo1moDWZMJT%2BmYzY1NLZWLxBXGjjrMrNN8hO5Q7hWlZrZOX1ostSr6PKE7NQ6CFYKlASU2HrJ041H%2BatTG28%2FXZXg4mwVWgAKi6FF%2B6lOS63GwLJCH%2FttSS0SD8BHGI1guv1DTDWhxLGK8wpkFaPt8h3ureKQV9xO7iFOVlhWxAeZs78fMf7UTX0NfhWo%2BP4Go5tSrXSskdM9Ld86d4iZaeJmGW3IooBWl2QEbvvm84Yz26gxqkJsFyWsmLN5r6iQi7ReuwqHLrgee750%2F82PZcX7Sbovqfi7jd%2BBGH6bT5Ka1tg48%2B7sMXPW7eJVjN7dm4MYv3viKYYpUN5t8XEO36tB0lZ%2F2y5u45G6%2BCrJijkbBHZkaeT2oEvxL9PBIMR%2FgPPoL1NdkaFBMVMRCvsid9KbCN3l%2F5xVIS9FQhbQVR8wdxQGP9j5YvXY%2FCxA7YOuoc3Dbs0bjoSmVvRoCPZa9Rn%2FlkgAO4j4akghGI5mDhiWFw8Z6iqnTWpPAk%2Fu5H9U3cquc60Kfeor%2FLWXGw8CwaLHAEESnYGaIBW4uW0kqMpaT3NKMoY9%2B&rb=x
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907315039.png' src="htmlScreenshots\1650907315039.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:21:56</td>
+        <td>
+          PASO 6: Primer, Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:21:57</td>
+        <td>
+          El producto seleccionado es, camiseta: Pack 3 Camiseta Sin Manga Algodón, Negra, Gris Blanco
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907316582.png' src="htmlScreenshots\1650907316582.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:01</td>
+        <td>
+          PASO 7: Primer,Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:02</td>
+        <td>
+          El Valor producto seleccionado es: 8065 pesos
+$
+8.065
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907321259.png' src="htmlScreenshots\1650907321259.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:10</td>
+        <td>
+          PASO 8: Ingreso de producto requerido
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:11</td>
+        <td>
+          Ingreso correcto de producto requerido
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907330844.png' src="htmlScreenshots\1650907330844.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:14</td>
+        <td>
+          PASO 9: Busqueda de producto
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:15</td>
+        <td>
+          Se realiza busqueda del producto ingresado
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907334784.png' src="htmlScreenshots\1650907334784.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:17</td>
+        <td>
+          PASO 10: Segundo, Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:18</td>
+        <td>
+          El Link del producto seleccionado es: https://click1.mercadolibre.cl/mclics/clicks/external/MLC/count?a=w%2Fk5yKMccutOjNi2I0ZV4tkLQIqkok0rQK8Q50gf5XsRru2TJqJqdxOt2H%2BhDwqYteU4mm2Hc9OVBTJsJ8H%2Fi8VB0TgokMK5q3vsOT05%2BDAYhDMrFIrvm2l%2BfN9sZ2wWQAPsRqj%2FNK%2Fp04lt%2BpEGHsLs%2B7aUGNh6%2Fz6PSJ5b9n9wEaYlJ7eFaoo7Lf%2BHYoKKt0i3owUGHkxF7mJ3evCtdasp2whOBbP%2FVKIKk2oiHmUTYGsAUg7iT17tdWqQ68jjwvOGih%2BrSD3oGzL4Z6eAlseSNNeCUVrgVXuAK3bL%2BpwsJq6fVStGbtUUJinbWVPSrneXu6ul8MorUdCw2HBaJn10HQ%2FUVlmD7czonpgSmfSxyMlhQtazQtWCNiY%2Bv8KFvXR4xN5AHykAeckwTPoHt%2BvElIFzOqLffvFPz8ZFl7FGcUyEHopeqN42%2Fs0ROhGHXKy2MD6TDXccDGv%2FKIcruoHFQ0ucUXX0DjPDLK4vRk5LUftXCHNUYPR1h1ODGS99s5wHAcC5ayAn7FV6zcNm223748CGUMMEMrJ6QFhGkWvDzFavs%2B09s6fd%2BB18BlXRufooJ%2BufwozhMMPa5Le54RpjMikDdoaEVict4B796ELPv3X2XfNYED9ts2fOHBCXxE6UG8V5rQ%3D%3D&rb=x
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907337343.png' src="htmlScreenshots\1650907337343.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:18</td>
+        <td>
+          PASO 11: Segundo, Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:19</td>
+        <td>
+          El producto seleccionado es, camiseta: Pack 3 Camisetas Blancas Juvenil 100% Algodon Tallas 14 Y 16
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907338885.png' src="htmlScreenshots\1650907338885.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:22</td>
+        <td>
+          PASO 12: Segundo, Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:23</td>
+        <td>
+          El Valor producto seleccionado es: 11540 pesos
+$
+11.540
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907342769.png' src="htmlScreenshots\1650907342769.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:32</td>
+        <td>
+          PASO 13: Ingreso de producto requerido
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:33</td>
+        <td>
+          Ingreso correcto de producto requerido
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907352975.png' src="htmlScreenshots\1650907352975.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:37</td>
+        <td>
+          PASO 14: Busqueda de producto
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:39</td>
+        <td>
+          Se realiza busqueda del producto ingresado
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907357287.png' src="htmlScreenshots\1650907357287.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:40</td>
+        <td>
+          PASO 15: Tercer, Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:40</td>
+        <td>
+          El Link del producto seleccionado es: https://articulo.mercadolibre.cl/MLC-916449979-camiseta-psg-paris-temporada-2021-2022-messi-30-_JM?searchVariation=174189862740#searchVariation=174189862740&position=3&search_layout=stack&type=item&tracking_id=25df0c57-f37d-4799-8fc7-afee6e35ce1a
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907360420.png' src="htmlScreenshots\1650907360420.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:42</td>
+        <td>
+          PASO 16: Tercer, Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:42</td>
+        <td>
+          El producto seleccionado es, camiseta: Camiseta Psg París Temporada 2021 - 2022 Messi -30
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907362144.png' src="htmlScreenshots\1650907362144.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:46</td>
+        <td>
+          PASO 17: Tercer, Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:47</td>
+        <td>
+          El Valor producto seleccionado es: Antes: 25900 pesos
+$
+25.900
+22014 pesos
+$
+22.014
+15% OFF
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907366050.png' src="htmlScreenshots\1650907366050.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:22:56</td>
+        <td>
+          PASO 18: Ingreso de producto requerido
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:22:57</td>
+        <td>
+          Ingreso correcto de producto requerido
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907376616.png' src="htmlScreenshots\1650907376616.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:23:01</td>
+        <td>
+          PASO 19: Busqueda de producto
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:23:03</td>
+        <td>
+          Se realiza busqueda del producto ingresado
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907381403.png' src="htmlScreenshots\1650907381403.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag="BUSQUEDAPRODUCTOMERCADOLIBREPORCATEGORIA"
+          device="">
+          <div class="test-detail">
+            <p class="name">BUSQUEDA PRODUCTO MERCADO LIBRE POR CATEGORIA</p>
+            <p class="text-sm">
+              <span>13:23:21 PM</span> / <span>00:01:00:247</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">BUSQUEDA PRODUCTO MERCADO LIBRE POR CATEGORIA</h5>
+<span class='badge badge-success'>04.25.2022 13:23:21</span>
+<span class='badge badge-danger'>04.25.2022 13:24:21</span>
+<span class='badge badge-default'>00:01:00:247</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">BUSQUEDAPRODUCTOMERCADOLIBREPORCATEGORIA</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:23:21</td>
+        <td>
+          Ir a Qtest : <a href='TOOLSQA ' target="_blank">BUSQUEDA PRODUCTO MERCADO LIBRE POR CATEGORIA</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:23:22</td>
+        <td>
+          PASO 1: Ingreso a Home Mercado Libre
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:23:23</td>
+        <td>
+          Ingreso correcto a Home Mercado Libre
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907402487.png' src="htmlScreenshots\1650907402487.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:23:25</td>
+        <td>
+          PASO 2: Informacion de este sitio usa Cookies
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:23:26</td>
+        <td>
+          Se da por entendido que el sitio acepta Cookies
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907405706.png' src="htmlScreenshots\1650907405706.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:23:28</td>
+        <td>
+          PASO 3: Ingreso de producto requerido
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:23:30</td>
+        <td>
+          Ingreso correcto de producto requerido
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907408508.png' src="htmlScreenshots\1650907408508.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:23:34</td>
+        <td>
+          PASO 4: Busqueda de producto
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:23:35</td>
+        <td>
+          Se realiza busqueda del producto ingresado
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907414776.png' src="htmlScreenshots\1650907414776.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:23:37</td>
+        <td>
+          PASO 5: Primer,Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:23:38</td>
+        <td>
+          El Link del producto seleccionado es: https://articulo.mercadolibre.cl/MLC-916449979-camiseta-psg-paris-temporada-2021-2022-messi-30-_JM?searchVariation=174189862740#searchVariation=174189862740&position=1&search_layout=stack&type=item&tracking_id=8eab64cd-f402-454a-bf4d-2919684986f4
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907417662.png' src="htmlScreenshots\1650907417662.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:23:38</td>
+        <td>
+          PASO 6: Primer, Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:23:39</td>
+        <td>
+          El producto seleccionado es, camiseta: Camiseta Psg París Temporada 2021 - 2022 Messi -30
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907418930.png' src="htmlScreenshots\1650907418930.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:23:42</td>
+        <td>
+          PASO 7: Primer,Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:23:43</td>
+        <td>
+          El Valor producto seleccionado es: Antes: 25900 pesos
+$
+25.900
+22014 pesos
+$
+22.014
+15% OFF
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907422343.png' src="htmlScreenshots\1650907422343.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:23:51</td>
+        <td>
+          PASO 8: Ingreso de producto requerido
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:23:52</td>
+        <td>
+          Ingreso correcto de producto requerido
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907431384.png' src="htmlScreenshots\1650907431384.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:23:56</td>
+        <td>
+          PASO 9: Busqueda de producto
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:23:56</td>
+        <td>
+          Se realiza busqueda del producto ingresado
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907436008.png' src="htmlScreenshots\1650907436008.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:24:08</td>
+        <td>
+          PASO 10: Busqueda por Categoria
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:24:11</td>
+        <td>
+          Seleccion correcta, busqueda por categoria Ropa interior
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907448984.png' src="htmlScreenshots\1650907448984.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:24:12</td>
+        <td>
+          PASO 11: Segundo, Producto Seleccionado
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:24:14</td>
+        <td>
+          El Link del producto seleccionado es: https://articulo.mercadolibre.cl/MLC-924857840-babydolls-camisola-sexy-bata-colaless-_JM?searchVariation=173838064595#searchVariation=173838064595&position=3&search_layout=grid&type=item&tracking_id=670cc491-0c23-4547-89d0-c846067a08d3
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907452992.png' src="htmlScreenshots\1650907452992.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:24:15</td>
+        <td>
+          PASO 12: Segundo, Producto Seleccionado Ropa Interior
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:24:16</td>
+        <td>
+          El producto seleccionado es, camiseta: Babydolls Camisola Sexy + Bata + Colaless
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907455656.png' src="htmlScreenshots\1650907455656.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:24:20</td>
+        <td>
+          PASO 13: Segundo, Producto Seleccionado Ropa Interior
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:24:21</td>
+        <td>
+          El Valor producto seleccionado es: 16.999
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1650907460422.png' src="htmlScreenshots\1650907460422.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "theme": "DARK",
+  "encoding": "ISO-8859-1",
+  "protocol": "HTTPS",
+  "timelineEnabled": false,
+  "offlineMode": false,
+  "documentTitle": "REPORTS",
+  "reportName": "REPORTS",
+  "timeStampFormat": "MMM dd, yyyy HH:mm:ss a",
+  "js": "",
+  "css": ".header .vheader .nav-logo > a .logo {background-image: url('https:\\TesisCIISA\\src\\main\\java\\config\\logoAbstracta.png')!important;background-size: 150px;width: 1000%;} .header .vheader .nav-logo {width: 180px;}"
+}
+

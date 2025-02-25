@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="email">
+
+
+    <test name="enviar email">
+        <classes>
+            <class name="testClases.demoQA.enviarEmail" />
+        </classes>
+    </test>
+
+</suite>
+
+
+
+
+
+
+

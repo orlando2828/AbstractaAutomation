@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="TOLLS_QA">
+    <parameter name="browser" value="edge"></parameter>
+    <parameter name="carpetaReporte" value="C:\Jenkins\report"></parameter>
+
+    <test name="BUSQUEDA PRODUCTO MERCADO LIBRE">
+        <classes>
+            <class name="testClases.mercadoLibre.CPA0001BusquedaProductosMercadoLibre" />
+        </classes>
+    </test>
+
+    <test name="BUSQUEDA PRODUCTO MERCADO LIBRE POR CATEGORIA">
+        <classes>
+            <class name="testClases.mercadoLibre.CPA0002BusquedaProductoPorCategoria" />
+        </classes>
+    </test>
+
+<!--    <test name="INGRESO TOOLS QA CHECKBOX ">-->
+<!--        <classes>-->
+<!--            <class name="testClases.demoQA.CPA002CheckBox" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="INGRESO TOOLS QA RADIO BUTTON">-->
+<!--        <classes>-->
+<!--            <class name="testClases.demoQA.CPA003RadioButton" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="INGRESO TOOLS QA WEBTABLE ">-->
+<!--        <classes>-->
+<!--            <class name="testClases.demoQA.CPA004WebTable" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="INGRESO TOOLS QA WIDGET">-->
+<!--        <classes>-->
+<!--            <class name="testClases.demoQA.CPA006Widget" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
+
+
+
+
+
+
+
