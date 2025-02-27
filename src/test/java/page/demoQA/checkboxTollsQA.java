@@ -2,6 +2,7 @@ package page.demoQA;
 
 import com.aventstack.extentreports.Status;
 import driver.DriverContext;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.metodosGenericos;
 
+import static org.openqa.selenium.By.xpath;
 import static utils.HtmlReport.addWebReportImage;
 
 public class checkboxTollsQA {
@@ -32,7 +34,8 @@ public class checkboxTollsQA {
     @FindBy(xpath = "//button[@class='rct-option rct-option-expand-all']")
     private WebElement btonMasCheckbox;
 
-    @FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[1]/span[1]/label[1]/span[3]")
+   // @FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[1]/span[1]/label[1]/span[3]")
+    @FindBy(xpath = "//span[@class='rct-title' and text() ='Desktop']" )
     private WebElement seleccionDesktop;
 
 
@@ -84,6 +87,10 @@ public class checkboxTollsQA {
 
         boolean seleccheck = metodosGenericos.visualizarObjeto(seleccionDesktop, 5);
         if (seleccheck) {
+            WebElement desktopElement = driver.findElement(xpath("//span[@class='rct-title' and text()='Desktop']"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", desktopElement);
+            WebDriverWait wait = new WebDriverWait(driver, (5));
+            wait.until(ExpectedConditions.elementToBeClickable(seleccionDesktop));
             seleccionDesktop.click();
             addWebReportImage("text Box ", "text box", Status.PASS, false);
             System.out.println("Se realiza click Seleccionador que expande el arbol del checkbox");
