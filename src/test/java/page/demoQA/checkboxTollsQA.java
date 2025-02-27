@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.metodosGenericos;
 
 import static utils.HtmlReport.addWebReportImage;
@@ -13,6 +15,7 @@ import static utils.HtmlReport.addWebReportImage;
 public class checkboxTollsQA {
 
     private WebDriver driver;
+    private WebDriverWait webDriverWait;
 
     public checkboxTollsQA() {
         this.driver = DriverContext.getDriver();
@@ -23,7 +26,10 @@ public class checkboxTollsQA {
     @FindBy (id = "item-1")
     private WebElement botonCheckbox;
 
-    @FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/button[1]")
+   // @FindBy(id = "//body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/button[1]")
+
+    //button[@class='rct-option rct-option-expand-all']
+    @FindBy(xpath = "//button[@class='rct-option rct-option-expand-all']")
     private WebElement btonMasCheckbox;
 
     @FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[1]/span[1]/label[1]/span[3]")
@@ -47,6 +53,8 @@ public class checkboxTollsQA {
 
         boolean menucheck = metodosGenericos.visualizarObjeto(botonCheckbox, 5);
         if (menucheck) {
+            WebDriverWait wait = new WebDriverWait(driver,(5));
+            wait.until(ExpectedConditions.elementToBeClickable(botonCheckbox));
             botonCheckbox.click();
             addWebReportImage("text Box ", "text box", Status.PASS, false);
             System.out.println("Se realiza click en opcion ChecBox del menu lateral izquierdo");
@@ -63,6 +71,8 @@ public class checkboxTollsQA {
 
         boolean btnmas = metodosGenericos.visualizarObjeto(btonMasCheckbox, 5);
         if (btnmas) {
+            WebDriverWait wait = new WebDriverWait(driver,(5));
+            wait.until(ExpectedConditions.elementToBeClickable(btonMasCheckbox));
             btonMasCheckbox.click();
             System.out.println("Se realiza click en + que expande el arbol del checkbox");
             addWebReportImage("text Box ", "text box", Status.PASS, false);

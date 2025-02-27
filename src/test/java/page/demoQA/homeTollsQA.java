@@ -45,7 +45,8 @@ public class homeTollsQA {
     public void paginaToolsqa() throws InterruptedException {
         boolean imgtoolsqa = metodosGenericos.visualizarObjeto(imgToolsQA, 5);
         if (imgtoolsqa) {
-            Thread.sleep(400);
+            WebDriverWait wait = new WebDriverWait(driver, (5));
+            wait.until(ExpectedConditions.elementToBeClickable(imgToolsQA));
             System.out.println("encuentra imagen imgtoolsqa");
             imgToolsQA.click();
             System.out.println("hace el click");
@@ -80,7 +81,7 @@ public class homeTollsQA {
             Assert.assertTrue(true);
             System.out.println("Hace el assertrue de elements");
         } else {
-            addWebReportImage("Agregar Elementos", "NO se Agregar Elementos", Status.FAIL, false);
+            addWebReportImage("Agregar Elementos", "No se agregan elementos", Status.FAIL, false);
             System.out.println("No es  Posible realizar Click en Page Elements");
             Assert.assertTrue(false);
         }

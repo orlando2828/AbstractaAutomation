@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">REPORTS</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">feb 25, 2025 13:35:54 p. m.</span></a>
+<a href="#"><span class="badge badge-primary">feb 27, 2025 17:48:41 p. m.</span></a>
 </li>
 </ul>
 </div>
@@ -66,25 +66,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>feb 25, 2025 13:35:54 p. m.</h3>
+<h3>feb 27, 2025 17:48:41 p. m.</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>feb 25, 2025 13:36:10 p. m.</h3>
+<h3>feb 27, 2025 17:49:20 p. m.</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -100,12 +100,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> tests passed
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='100%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -123,10 +123,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='47%'><b>8</b> events passed</small></div>
+<div><small data-tooltip='16%'><b>4</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>9</b> others
+<small data-tooltip='20%'><b>5</b> events failed,
+<b data-tooltip='%'>15</b> others
 </small>
 </div>
 </div>
@@ -140,12 +140,12 @@
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>IngresaralTOLLSQALOGIN</td>
+<td>IngresaralTOLLSQACHECKBOX</td>
+<td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>0%</td>
 </tr>
 </tbody>
 </table></div>
@@ -170,8 +170,8 @@
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 0,
+passParent: 0,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -187,11 +187,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 8,
-failEvents: 0,
-warningEvents: 0,
+passEvents: 4,
+failEvents: 5,
+warningEvents: 5,
 skipEvents: 0,
-infoEvents: 9
+infoEvents: 10
 };
 </script><div class="test-wrapper row view category-view attributes-view">
 <div class="test-list">
@@ -204,15 +204,15 @@ infoEvents: 9
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">IngresaralTOLLSQALOGIN</p>
+<p class="name">IngresaralTOLLSQACHECKBOX</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>IngresaralTOLLSQALOGIN</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<h4>IngresaralTOLLSQACHECKBOX</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -223,9 +223,9 @@ infoEvents: 9
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:36:00 p. m.</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:48:44 p. m.</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>Abstracta_automationUI</a>
 </td>
@@ -252,7 +252,7 @@ infoEvents: 9
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -260,34 +260,34 @@ infoEvents: 9
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">IngresaralTOLLSQALOGIN</a>
+<a class="dropdown-item" href="#">IngresaralTOLLSQACHECKBOX</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
-          tag="IngresaralTOLLSQALOGIN"
+          tag="IngresaralTOLLSQACHECKBOX"
           device="">
           <div class="test-detail">
             <p class="name">Abstracta_automationUI</p>
             <p class="text-sm">
-              <span>13:36:00 p. m.</span> / <span>00:00:10:114</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>17:48:44 p. m.</span> / <span>00:00:36:383</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Abstracta_automationUI</h5>
-<span class='badge badge-success'>02.25.2025 13:36:00</span>
-<span class='badge badge-danger'>02.25.2025 13:36:10</span>
-<span class='badge badge-default'>00:00:10:114</span>
+<h5 class="test-status text-fail">Abstracta_automationUI</h5>
+<span class='badge badge-success'>02.27.2025 17:48:44</span>
+<span class='badge badge-danger'>02.27.2025 17:49:20</span>
+<span class='badge badge-default'>00:00:36:383</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">IngresaralTOLLSQALOGIN</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">IngresaralTOLLSQACHECKBOX</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -295,153 +295,206 @@ infoEvents: 9
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:36:00 p. m.</td>
+        <td>5:48:44 p. m.</td>
         <td>
           Ir a Qtest : <a href='TOOLSQA ' target="_blank">Abstracta_automationUI</a>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:36:01 p. m.</td>
+        <td>5:48:48 p. m.</td>
         <td>
           PASO 1: Se realiza el login de Tools QA
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:36:01 p. m.</td>
+        <td>5:48:49 p. m.</td>
         <td>
           Ingresar datos de acceso
     <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='htmlScreenshots\1740501361610.png' src="htmlScreenshots\1740501361610.png">
+    <img data-featherlight='htmlScreenshots\1740689328802.png' src="htmlScreenshots\1740689328802.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:36:02 p. m.</td>
+        <td>5:48:49 p. m.</td>
         <td>
           PASO 2: Agregar Elementos
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:36:02 p. m.</td>
+        <td>5:48:49 p. m.</td>
         <td>
           Agregar Elementos
     <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='htmlScreenshots\1740501362646.png' src="htmlScreenshots\1740501362646.png">
+    <img data-featherlight='htmlScreenshots\1740689329650.png' src="htmlScreenshots\1740689329650.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:36:04 p. m.</td>
+        <td>5:48:51 p. m.</td>
         <td>
           PASO 3: text Box 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:36:05 p. m.</td>
+        <td>5:48:51 p. m.</td>
         <td>
           text box
     <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='htmlScreenshots\1740501364899.png' src="htmlScreenshots\1740501364899.png">
+    <img data-featherlight='htmlScreenshots\1740689331186.png' src="htmlScreenshots\1740689331186.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:36:05 p. m.</td>
+        <td>5:48:51 p. m.</td>
         <td>
-          PASO 4: Agregar Instituciones
+          PASO 4: text Box 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:36:05 p. m.</td>
+        <td>5:48:52 p. m.</td>
         <td>
-          Ingresar datos de acceso
+          text box
     <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='htmlScreenshots\1740501365603.png' src="htmlScreenshots\1740501365603.png">
+    <img data-featherlight='htmlScreenshots\1740689331964.png' src="htmlScreenshots\1740689331964.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:36:06 p. m.</td>
+        <td>5:48:57 p. m.</td>
         <td>
           PASO 5: Agregar Instituciones
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:36:07 p. m.</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>5:48:57 p. m.</td>
         <td>
           Ingresar datos de acceso
     <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='htmlScreenshots\1740501366858.png' src="htmlScreenshots\1740501366858.png">
+    <img data-featherlight='htmlScreenshots\1740689337690.png' src="htmlScreenshots\1740689337690.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>5:48:57 p. m.</td>
+        <td>
+          Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[1]/span[1]/label[1]/span[3]' (tried for 5 second(s) with 500 milliseconds interval)
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:36:07 p. m.</td>
+        <td>5:49:03 p. m.</td>
         <td>
           PASO 6: Agregar Instituciones
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:36:08 p. m.</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>5:49:03 p. m.</td>
         <td>
           Ingresar datos de acceso
     <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='htmlScreenshots\1740501367804.png' src="htmlScreenshots\1740501367804.png">
+    <img data-featherlight='htmlScreenshots\1740689343324.png' src="htmlScreenshots\1740689343324.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>5:49:03 p. m.</td>
+        <td>
+          Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[2]/span[1]/button[1]' (tried for 5 second(s) with 500 milliseconds interval)
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:36:08 p. m.</td>
+        <td>5:49:08 p. m.</td>
         <td>
           PASO 7: Agregar Instituciones
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:36:09 p. m.</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>5:49:09 p. m.</td>
         <td>
           Ingresar datos de acceso
     <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='htmlScreenshots\1740501368909.png' src="htmlScreenshots\1740501368909.png">
+    <img data-featherlight='htmlScreenshots\1740689348943.png' src="htmlScreenshots\1740689348943.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>5:49:09 p. m.</td>
+        <td>
+          Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[2]/span[1]/button[1]' (tried for 5 second(s) with 500 milliseconds interval)
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>1:36:09 p. m.</td>
+        <td>5:49:14 p. m.</td>
         <td>
           PASO 8: Agregar Instituciones
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:36:10 p. m.</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>5:49:14 p. m.</td>
         <td>
           Ingresar datos de acceso
     <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='htmlScreenshots\1740501369981.png' src="htmlScreenshots\1740501369981.png">
+    <img data-featherlight='htmlScreenshots\1740689354526.png' src="htmlScreenshots\1740689354526.png">
     
     </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>5:49:14 p. m.</td>
+        <td>
+          Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/button[1]' (tried for 5 second(s) with 500 milliseconds interval)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:49:20 p. m.</td>
+        <td>
+          PASO 9: Agregar Instituciones
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>5:49:20 p. m.</td>
+        <td>
+          Ingresar datos de acceso
+    <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='htmlScreenshots\1740689360164.png' src="htmlScreenshots\1740689360164.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>5:49:20 p. m.</td>
+        <td>
+          Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath:  //body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/button[2]' (tried for 5 second(s) with 500 milliseconds interval)
         </td>
       </tr>
   </tbody>
