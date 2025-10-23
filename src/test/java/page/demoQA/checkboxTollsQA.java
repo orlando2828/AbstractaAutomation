@@ -39,7 +39,8 @@ public class checkboxTollsQA {
     private WebElement seleccionDesktop;
 
 
-    @FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[2]/span[1]/button[1]")
+   // @FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[2]/span[1]/button[1]")
+    @FindBy(xpath = "//span[@class='rct-title' and text()='Documents']/ancestor::li//button/*[name()='svg']")
     private WebElement FlechaAbajoExpandeUno;
 
     @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[2]/span[1]/button[1]")
@@ -89,9 +90,9 @@ public class checkboxTollsQA {
         if (seleccheck) {
             WebElement desktopElement = driver.findElement(xpath("//span[@class='rct-title' and text()='Desktop']"));
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", desktopElement);
-            WebDriverWait wait = new WebDriverWait(driver, (5));
-            wait.until(ExpectedConditions.elementToBeClickable(seleccionDesktop));
-            seleccionDesktop.click();
+           // WebDriverWait wait = new WebDriverWait(driver, (5));
+            //wait.until(ExpectedConditions.elementToBeClickable(seleccionDesktop));
+           // seleccionDesktop.click();
             addWebReportImage("text Box ", "text box", Status.PASS, false);
             System.out.println("Se realiza click Seleccionador que expande el arbol del checkbox");
 
@@ -103,9 +104,11 @@ public class checkboxTollsQA {
 
         boolean expandeUno = metodosGenericos.visualizarObjeto(FlechaAbajoExpandeUno, 5);
         if (expandeUno) {
+            WebDriverWait wait = new WebDriverWait(driver,(5));
+            wait.until(ExpectedConditions.elementToBeClickable(FlechaAbajoExpandeUno));
             FlechaAbajoExpandeUno.click();
             addWebReportImage("text Box ", "text box", Status.PASS, false);
-            System.out.println("Se realiza click Seleccionador que expande el arbol del checkbox");
+            System.out.println("Se realiza click Seleccionador que expande el 2do arbol del checkbox");
 
         } else {
             addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
